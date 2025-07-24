@@ -1,0 +1,85 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #e9f5f1;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  text-align: center;
+  color: #2d6a4f;
+}
+
+.profile-card {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.profile-left,
+.profile-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="file"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #2d6a4f;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #22543d;
+}
+
+.flash {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.flash.success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.flash.danger {
+  background-color: #f8d7da;
+  color: #842029;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - M-Tickets</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="left-section">
+      <img src="{{ url_for('static', filename='images/m-logo.png') }}" alt="M-Tickets Logo" class="logo">
+      <span class="user-name">Welcome, {{ user.name }}</span>
+    </div>
+
+    <div class="right-section">
+      <a href="{{ url_for('profile') }}" class="profile-link">
+        <img src="{{ url_for('static', filename='uploads/' + user.image) }}" alt="Profile" class="profile-image">
+      </a>
+      <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    
+    <section class="hero">
+  <h2>✅ TextAuth Test Submission Successful</h2>
+  <p>
+    Thank you for participating in this <span class="highlight">TextAuth authentication test</span>.
+    Your identity has been securely verified.
+  </p>
+  <p>
+    This dashboard marks the end of a successful secure login session using <strong>python, flask for back end, html + css for front-end and mysql as the db</strong>.
+    You may now explore the platform or manage your profile.
+  </p>
+  <div class="user-info">
+    Logged in as: <strong>{{ user.email }}</strong>
+  </div>
+</section>
+
+  </main>
+</body>
+</html>

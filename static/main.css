@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f8fb;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 15px;
+}
+
+.user-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.profile-link {
+  margin-right: 20px;
+}
+
+.profile-image {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4CAF50;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #e04344;
+}
+
+.dashboard-main {
+  padding: 40px;
+  text-align: center;
+}
+
+
+ .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: white;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 2rem auto;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+    .hero h2 {
+      font-size: 2rem;
+      color: #111827;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+    .hero .highlight {
+      color: #3b82f6;
+      font-weight: 600;
+    }

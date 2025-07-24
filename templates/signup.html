@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - M-Tickets</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='up.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="signup-container">
+    <!-- Left side: form -->
+    <div class="form-section">
+      <h2>Create Your Account</h2>
+
+      <!-- Flash messages -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <form action="{{ url_for('signup') }}" method="POST" enctype="multipart/form-data" class="signup-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" name="name" required placeholder="Your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" name="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" required placeholder="07XX XXX XXX">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" required placeholder="Enter password">
+        </div>
+
+        <div class="form-group">
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" name="confirm_password" required placeholder="Re-enter password">
+        </div>
+
+        <div class="form-group">
+          <label for="profile_image">Upload Profile Image</label>
+          <input type="file" name="profile_image" accept="image/*" required>
+        </div>
+
+        <button type="submit" class="btn">Sign Up</button>
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+      </form>
+    </div>
+
+    <!-- Right side: logo -->
+    <div class="image-section">
+      <img src="{{ url_for('static', filename='images/m-logo.png') }}" alt="Logo">
+    </div>
+  </div>
+</body>
+</html>
